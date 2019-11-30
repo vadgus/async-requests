@@ -3,6 +3,8 @@
 ### sending many async requests
 <br>
 
+[![Build Status](https://travis-ci.com/vadgus/async-requests.svg?branch=master)](https://travis-ci.com/vadgus/async-requests)
+[![codecov](https://codecov.io/gh/vadgus/async-requests/branch/master/graph/badge.svg)](https://codecov.io/gh/vadgus/async-requests)
 
 
 ## install
