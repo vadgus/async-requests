@@ -12,9 +12,11 @@ class Request:
 
     def run(self, amount: int):
         if not isinstance(amount, int):
-            raise TypeError(f"Argument must be type int, not {type(amount)}")
+            print("Argument must be type int, not {type(amount)}")
+            return False
         if not amount > 0:
-            raise ValueError(f"Argument must be more than zero")
+            print("Argument must be more than zero")
+            return False
 
         self._amount = amount
         loop = asyncio.get_event_loop()
