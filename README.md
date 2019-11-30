@@ -1,6 +1,6 @@
 # asyncio-requests
 
-sending 1000 async requests
+sending many async requests
 
 
 
