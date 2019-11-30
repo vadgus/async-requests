@@ -28,7 +28,8 @@ class Requests:
     async def run(self, url, index):
         async with ClientSession() as session:
             async with session.get(url) as response:
-                response_data = await response.read()
-                self._read += 1
+                # response_data = await response.read()
                 # print(response_data)
+                await response.read()
+                self._read += 1
                 print('%d: %f' % (index, time()))

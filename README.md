@@ -1,29 +1,33 @@
-# asyncio-requests
+# async-requests
 
-sending many async requests
+### sending many async requests
+<br>
 
 
 
-### install system packages
+## install
+
+#### system packages
 
 ```
 apt install python3.7
 apt install python3-pip
 ```
 
-### virtualenv
-#### install
+#### virtualenv
 ```
 pip3 install virtualenv
 virtualenv --python=python3.7 .venv
-```
-
-#### activate
-```
 . .venv/bin/activate
 ```
 
-### install project packages
+#### dependencies
 ```
 pip3 install -r requirements.txt
+```
+<br>
+
+## run
+```
+python3.7 main.py
 ```
