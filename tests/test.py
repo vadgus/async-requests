@@ -1,3 +1,6 @@
+import pytest
 from src.request import Request
 
-r = Request(10)
+
+def test_ok():
+    return Request().run(10)
