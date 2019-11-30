@@ -29,5 +29,5 @@ pip3 install -r requirements.txt
 
 ## run
 ```
-python3.7 main.py
+python3.7 src/main.py
 ```
