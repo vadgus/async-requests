@@ -1,30 +1,40 @@
 #!/usr/bin/env python
-from setuptools import setup
+import sys
 
-version = '2.0.15'
-classifiers = ["Development Status :: 5 - Production/Stable",
-               "Environment :: Plugins",
-               "Intended Audience :: Developers",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: Implementation :: PyPy",
-               "License :: OSI Approved :: Apache Software License",
-               "Topic :: Software Development :: Testing"]
+from setuptools import setup, find_packages
 
-setup(name='codecov',
-      version=version,
-      description="Hosted coverage reports for GitHub, Bitbucket and Gitlab",
-      long_description=None,
-      classifiers=classifiers,
-      keywords='coverage codecov code python java scala php',
-      author='@codecov',
-      author_email='hello@codecov.io',
-      url='https://github.com/codecov/codecov-python',
-      license='http://www.apache.org/licenses/LICENSE-2.0',
-      packages=['codecov'],
-      include_package_data=True,
+extra = {}
+if sys.version_info >= (3, 4):
+    extra['use_2to3'] = False
+    extra['convert_2to3_doctests'] = ['README.md']
+
+CLASSIFIERS = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Topic :: Software Development :: Libraries :: Python Modules'
+]
+
+setup(name='async-requests',
+      version="0.0.1",
+      description="""many async requests sender""",
+      long_description=open('README.md').read(),
+      long_description_content_type='text/markdown',
+      author="Vadim Gusyatnikov",
+      author_email="guva.gurtam@gmail.com",
+      url='https://github.com/vadgus/async-requests',
+      packages=find_packages(),
+      download_url='https://github.com/vadgus/async-requests',
+      classifiers=CLASSIFIERS,
+      keywords='many async requests sender',
       zip_safe=True,
-      install_requires=["requests>=2.7.9", "coverage"],
-      entry_points={'console_scripts': ['codecov=codecov:main']},
-      python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+      install_requires=[],
+      tests_requires=[
+          'pytest==3.8.0',
+          'pytest-cov==2.6.0',
+          'pytest-asyncio==0.9.0',
+      ]
       )

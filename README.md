@@ -1,6 +1,6 @@
 # async-requests
 
-### sending many async requests
+### many async requests sender
 <br>
 
 [![Build Status](https://travis-ci.com/vadgus/async-requests.svg?branch=master)](https://travis-ci.com/vadgus/async-requests)
