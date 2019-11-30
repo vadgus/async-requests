@@ -1,3 +1,3 @@
-from .lib import Requests
+from .request import Request
 
-Requests(100)
+Request(100)

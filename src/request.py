@@ -3,7 +3,7 @@ from time import time
 from aiohttp import ClientSession
 
 
-class Requests:
+class Request:
     _amount = 0
 
     _start = None
