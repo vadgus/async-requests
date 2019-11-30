@@ -1,4 +1,3 @@
-import pytest
 from src.request import Request
 
 
