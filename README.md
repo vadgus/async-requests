@@ -30,5 +30,5 @@ pip3 install -r requirements.txt
 
 ## run
 ```bash
-python3.7 src/main.py
+python3.7 examples/main.py
 ```
