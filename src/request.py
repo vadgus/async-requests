@@ -6,6 +6,7 @@ from aiohttp import ClientSession
 class Request:
     _amount = 0
 
+    _loop = None
     _start = None
     _tasks = []
     _read = 0
@@ -13,7 +14,6 @@ class Request:
     def run(self, amount: int) -> bool:
         if isinstance(amount, int) and amount > 0:
             self._amount = amount
-            loop = asyncio.get_event_loop()
 
             url = "https://www.google.com/?hash="
             for i in range(self._amount):
@@ -22,11 +22,16 @@ class Request:
                 self._tasks.append(task)
 
             self._start = time()
-            loop.run_until_complete(asyncio.wait(self._tasks))
+            self.get_loop().run_until_complete(asyncio.wait(self._tasks))
 
             print("\n%s seconds" % str(time() - self._start))
 
         return self._amount == self._read
+
+    def get_loop(self):
+        if not self._loop:
+            self._loop = asyncio.get_event_loop()
+        return self._loop
 
     async def _request(self, url, index):
         async with ClientSession() as session:
