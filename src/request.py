@@ -1,9 +1,16 @@
+"""
+Async requests
+"""
 import asyncio
 from time import time
+
 from aiohttp import ClientSession
 
 
 class Request:
+    """
+    Request class
+    """
     _amount = 0
 
     _loop = None
@@ -11,7 +18,10 @@ class Request:
     _tasks = []
     _read = 0
 
-    def run(self, amount: int) -> bool:
+    def run(self, amount: int = 10) -> bool:
+        """
+        Requests run
+        """
         if isinstance(amount, int) and amount > 0:
             self._amount = amount
 
@@ -29,6 +39,9 @@ class Request:
         return self._amount == self._read
 
     def get_loop(self):
+        """
+        Get event loop
+        """
         if not self._loop:
             self._loop = asyncio.get_event_loop()
         return self._loop

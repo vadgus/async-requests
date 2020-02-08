@@ -1,3 +1,3 @@
 from src.request import Request
 
-Request().run(10)
+Request().run()
