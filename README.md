@@ -12,14 +12,14 @@
 #### system packages
 
 ```bash
-apt install python3.7
+apt install python3.8
 apt install python3-pip
 ```
 
 #### virtualenv
 ```bash
 pip3 install virtualenv
-virtualenv --python=python3.7 .venv
+virtualenv --python=python3.8 .venv
 . .venv/bin/activate
 ```
 
@@ -30,5 +30,5 @@ pip3 install -r requirements.txt
 
 ## run
 ```bash
-python3.7 examples/main.py
+python3.8 examples/main.py
 ```

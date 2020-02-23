@@ -24,7 +24,7 @@ class Request:
         if isinstance(amount, int) and amount > 0:
             self._amount = amount
 
-            url = "https://www.google.com/?hash="
+            url = "http://www.google.com/?hash="
             for i in range(self._amount):
                 url = url + "1"
                 task = asyncio.ensure_future(self._request(url.format(i), i))
