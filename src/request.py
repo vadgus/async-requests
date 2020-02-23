@@ -12,7 +12,6 @@ class Request:
     Request class
     """
     _amount = 0
-
     _loop = None
     _start = None
     _tasks = []
